@@ -7,11 +7,9 @@ const allAvos = async (request: NextApiRequest, response: NextApiResponse) => {
   const id = request.query.id;
   const entry = await db.getById(id as string);
 
-  response.statusCode = 200;
   response.setHeader('Content-Type', 'application/json');
-  response.end(JSON.stringify({ data: entry }));
 
-  response.status(200).json({ data: entry });
+  response.status(200).json(entry);
 };
 
 export default allAvos;
