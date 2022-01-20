@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import Navbar from 'components/Navbar/Navbar';
 import ProductsService, {
   ProductsResponse
 } from 'services/products/ProductsService';
@@ -19,7 +18,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      <Navbar />
       <h1>Hello World!</h1>
       {productList &&
         productList.data.map((product) => <div>{product.name}</div>)}

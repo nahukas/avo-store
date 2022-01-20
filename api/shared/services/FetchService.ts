@@ -14,17 +14,8 @@ class FetchService {
       method: 'GET',
       headers: FetchService.getHeaders()
     });
-    return FetchService.processResponse<T>(response);
-  }
 
-  static _adjustSortDirection(sortDirection: string): string {
-    if (sortDirection === 'ascend') {
-      return 'ASC';
-    } else if (sortDirection === 'descend') {
-      return 'DESC';
-    } else {
-      throw new Error('No SortDirection defined');
-    }
+    return FetchService.processResponse<T>(response);
   }
 
   static async post<T>(params: FetchParams): Promise<T> {
