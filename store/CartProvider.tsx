@@ -2,7 +2,8 @@ import React, { Dispatch, useContext, useReducer } from 'react';
 
 import { cartActionTypes } from './cart.types';
 import { CartAction } from './cart.actions';
-import cartReducer, { CartItemType, CartState } from './cart.reducer';
+import cartReducer, { CartState } from './cart.reducer';
+import { getCartCount, getCartSubTotal } from './cart.utils';
 
 const defaultState = {} as CartState;
 
@@ -22,13 +23,6 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     </CartItemsContext.Provider>
   );
 };
-
-// utils
-const getCartSubTotal = (sum: number, item: CartItemType) => {
-  sum += item.price * item.quantity;
-  return sum;
-};
-const getCartCount = (sum: number, item: CartItemType) => sum + item.quantity;
 
 export const useCart = () => {
   const itemsById = useContext(CartItemsContext);
