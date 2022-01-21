@@ -2,40 +2,20 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@database": [
-        "database/db.ts"
-      ],
-      "assets/*": [
-        "assets/*"
-      ],
-      "components/*": [
-        "components/*"
-      ],
-      "config/*": [
-        "config/*"
-      ],
-      "constants/*": [
-        "constants/*"
-      ],
-      "context/*": [
-        "context/*"
-      ],
-      "hooks/*": [
-        "hooks/*"
-      ],
-      "http/*": [
-        "http/*"
-      ],
-      "utils/*": [
-        "utils/*"
-      ]
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@config/*": ["config/*"],
+      "@constants/*": ["constants/*"],
+      "@context/*": ["context/*"],
+      "@database": ["database/db.ts"],
+      "@hooks/*": ["hooks/*"],
+      "@http/*": ["http/*"],
+      "@store/*": ["store/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     },
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -49,12 +29,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

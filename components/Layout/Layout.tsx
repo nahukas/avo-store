@@ -1,8 +1,8 @@
-import Navbar from 'components/Navbar/Navbar';
+import Header from '@components/Header/Header';
 
 const Layout: React.FC = ({ children }) => (
   <div>
-    <Navbar />
+    <Header />
     {children}
     <footer>this is a footer</footer>
   </div>
