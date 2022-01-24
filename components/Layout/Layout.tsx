@@ -1,10 +1,11 @@
-import Header from '@components/Header/Header';
+import Header from '@components/Layout/Header/Header';
+import Footer from '@components/Layout/Footer/Footer';
 
 const Layout: React.FC = ({ children }) => (
   <div>
     <Header />
     {children}
-    <footer>this is a footer</footer>
+    <Footer />
   </div>
 );
 

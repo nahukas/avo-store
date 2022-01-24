@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { useCart } from '@store/CartProvider';
 
-import styles from '@styles/components/Header.module.scss';
+import styles from '@styles/components/header.module.scss';
 
 const Header: React.FC = () => {
   const { pathname } = useRouter();
