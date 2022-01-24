@@ -1,7 +1,7 @@
 import FetchService from 'api/shared/services/FetchService';
 
 export interface ProductsResponse {
-  data: Record<TProductId, TProduct>[];
+  data: TProduct[];
   length: number;
 }
 
