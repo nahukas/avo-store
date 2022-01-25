@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 
-import CartProvider from '@store/CartProvider';
+import CartProvider from '@context/cart/CartProvider';
 import Layout from 'components/Layout/Layout';
 
 import 'semantic-ui-css/semantic.min.css';

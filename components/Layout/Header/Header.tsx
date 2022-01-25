@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { useCart } from '@store/CartProvider';
+import { useCart } from '@context/cart/CartProvider';
 
 import styles from '@styles/components/header.module.scss';
 
