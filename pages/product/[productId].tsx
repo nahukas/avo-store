@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import ProductsService from 'services/products/ProductsService';
+import Loading from '@components/Loading/Loading';
+import ProductSummary from '@components/ProductSummary/ProductSummary';
 
 const ProductItem: React.FC = () => {
   const router = useRouter();
@@ -19,22 +21,18 @@ const ProductItem: React.FC = () => {
         setProduct(response);
       } catch (error) {
         console.error(error);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchProduct();
   }, [productId]);
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
   return (
-    <section>
-      {product ? <h1>Avocado: {product.name}</h1> : <h1>Product not found</h1>}
-    </section>
+    <main>
+      <div className='container'>
+        {product == null ? <Loading /> : <ProductSummary product={product} />}
+      </div>
+    </main>
   );
 };
 
