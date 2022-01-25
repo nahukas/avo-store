@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Input, Icon, Transition } from 'semantic-ui-react';
 
-import { useCartMutations } from '@store/CartProvider';
+import { useCartMutations } from '@context/cart/CartProvider';
 
 type AddToCartProps = {
   product: TProduct;

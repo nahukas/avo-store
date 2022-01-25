@@ -10,7 +10,6 @@
       "@database": ["database/db.ts"],
       "@hooks/*": ["hooks/*"],
       "@http/*": ["http/*"],
-      "@store/*": ["store/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     },
